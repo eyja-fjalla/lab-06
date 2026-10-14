@@ -11,8 +11,7 @@ package com.example.lab_6
  * @property mana the current mana available for casting spells
  * @property spellPower the base power used for spell damage calculation
  */
-class Wizard (val name: String, var mana: Int, var spellPower: Int)
-{
+class Wizard(val name: String, var mana: Int, var spellPower: Int) {
     /**
      * Casts a spell and returns the damage dealt
      *
@@ -45,5 +44,4 @@ class Wizard (val name: String, var mana: Int, var spellPower: Int)
             }
         }
     }
-
 }

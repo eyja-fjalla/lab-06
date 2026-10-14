@@ -32,14 +32,15 @@ class WizardTest {
     @Test
     fun castSpell_frostbite_successful() {
         val damageDealt = evilWizard.castSpell("Frostbite")
-        assertEquals(20, damageDealt) // spellPower of 10 * 2 = 20
-        assertEquals(25, evilWizard.mana) // mana of 30 - 5 = 25
+        assertEquals(20, damageDealt)
+        assertEquals(25, evilWizard.mana)
     }
     @Test
     fun castSpell_frostbite_unsuccessful() {
-        evilWizard.mana = 2 // Evil Wizard does not have enough mana to cast "Frostbite"
+        evilWizard.mana = 3 // Evil Wizard does not have enough mana to cast "Frostbite"
         val damageDealt = evilWizard.castSpell("Frostbite")
         assertEquals(0, damageDealt)
-        assertEquals(2, evilWizard.mana)
+        assertEquals(3, evilWizard.mana)
     }
+
 }
